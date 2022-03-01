@@ -1,29 +1,19 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "EVENT")
-public class Event extends  MappedSuperclass{
+public class Event {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "event_id")
     private int id;
 
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "Patient",
-//            joinColumns = @JoinColumn(name = "patient_id")
-//    )
-//    private List<Patient> patient;
-
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "Purpose",
-//            joinColumns = @JoinColumn(name = "purpose_id")
-//    )
-//    private List<Purpose> purposes;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
 
     @Column(name = "STATUS")
     private int status;
@@ -33,6 +23,34 @@ public class Event extends  MappedSuperclass{
 
 
     public Event() {
+    }
 
+    public Event(int status, String type) {
+        this.status = status;
+        this.type = type;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

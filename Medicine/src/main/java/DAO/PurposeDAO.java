@@ -1,36 +1,38 @@
+package DAO;
+
 import Entities.Patient;
+import Entities.Purpose;
 import Util.HibernateSessionFactoryUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class UserDAO {
+public class PurposeDAO {
 
-    public Patient findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Patient.class, id);
+    public Purpose findById(int id) {
+        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Purpose.class, id);
     }
 
-    public void save(Patient patient) {
+    public void save(Purpose purpose) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(patient);
+        session.save(purpose);
         tx1.commit();
         session.close();
     }
 
-    public void update(Patient patient) {
+    public void update(Purpose purpose) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(patient);
+        session.update(purpose);
         tx1.commit();
         session.close();
     }
 
-    public void delete(Patient patient) {
+    public void delete(Purpose purpose) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(patient);
+        session.delete(purpose);
         tx1.commit();
         session.close();
     }
-
 }
