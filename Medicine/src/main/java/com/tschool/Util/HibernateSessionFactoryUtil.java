@@ -1,9 +1,9 @@
-package Util;
+package com.tschool.Util;
 
-import Entities.Event;
-import Entities.Medicament;
-import Entities.Patient;
-import Entities.Purpose;
+import com.tschool.Entities.Event;
+import com.tschool.Entities.Medicament;
+import com.tschool.Entities.Patient;
+import com.tschool.Entities.Purpose;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

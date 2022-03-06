@@ -1,4 +1,4 @@
-package Entities;
+package com.tschool.Entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;
