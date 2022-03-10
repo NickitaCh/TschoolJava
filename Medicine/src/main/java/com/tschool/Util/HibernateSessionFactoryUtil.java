@@ -1,9 +1,9 @@
 package com.tschool.Util;
 
-import com.tschool.Entities.Event;
-import com.tschool.Entities.Medicament;
-import com.tschool.Entities.Patient;
-import com.tschool.Entities.Purpose;
+import com.tschool.Entity.Event;
+import com.tschool.Entity.Medicament;
+import com.tschool.Entity.Patient;
+import com.tschool.Entity.Purpose;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

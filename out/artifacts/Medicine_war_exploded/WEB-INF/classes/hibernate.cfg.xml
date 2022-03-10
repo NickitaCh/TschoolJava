@@ -14,11 +14,11 @@
     <property name="show_sql">true</property>
 
 
-    <property name="hibernate.hbm2ddl.auto" >update</property>
+<!--    <property name="hibernate.hbm2ddl.auto" >update</property>-->
 
-    <mapping class="Entities.Event" />
-    <mapping class="Entities.Medicament" />
-    <mapping class="Entities.Patient" />
-    <mapping class="Entities.Purpose" />
+    <mapping class="com.tschool.Entity.Event" />
+    <mapping class="com.tschool.Entity.Medicament" />
+    <mapping class="com.tschool.Entity.Patient" />
+    <mapping class="com.tschool.Entity.Purpose" />
   </session-factory>
 </hibernate-configuration>

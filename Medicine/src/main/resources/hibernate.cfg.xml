@@ -16,9 +16,9 @@
 
 <!--    <property name="hibernate.hbm2ddl.auto" >update</property>-->
 
-    <mapping class="com.tschool.Entities.Event" />
-    <mapping class="com.tschool.Entities.Medicament" />
-    <mapping class="com.tschool.Entities.Patient" />
-    <mapping class="com.tschool.Entities.Purpose" />
+    <mapping class="com.tschool.Entity.Event" />
+    <mapping class="com.tschool.Entity.Medicament" />
+    <mapping class="com.tschool.Entity.Patient" />
+    <mapping class="com.tschool.Entity.Purpose" />
   </session-factory>
 </hibernate-configuration>
